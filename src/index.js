@@ -5,7 +5,7 @@ import 'normalize.css/normalize.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
-import './styles/global.scss';
+import './styles/styles.scss';
 
 ReactDOM.render(
   <React.StrictMode>
