@@ -2,6 +2,11 @@
 @import "./utils/global.scss";
 @import "./utils/bootstrap.scss";
 
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
 // Components
-@import "./components/Header.scss";
+@import "./components/header.scss";
+@import "./components/buttons.scss";
+
 

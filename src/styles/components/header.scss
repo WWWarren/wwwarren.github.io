@@ -1,3 +1,76 @@
-.test {
-    background: $oxford-blue;
+.logo {
+    & img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.nav {
+    display: none;
+    font-size: 14px;
+    cursor: pointer;
+
+    .fas {
+        font-size: 10px;
+
+        @media (min-width: 1200px) {
+            font-size: 12px;
+        }
+    }
+
+    div {
+        transition: color 0.2s;
+        &:hover {
+            color: $oxford-orange;
+        }
+    }
+
+    @media (min-width: 992px) {
+        display: flex;
+     }
+
+    @media (min-width: 1200px) {
+        font-size: 16px;
+    }
+}
+
+.more-buttons {
+    button {
+        font-size: 15px;
+        line-height: 15px;
+        width: 40px;
+        height: 40px;
+
+        &.mob-menu {
+            color: $oxford-blue;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            line-height: 20px;
+            width: 55px;
+            height: 55px;
+        }
+
+        @media (min-width: 992px) {
+            font-size: 15px;
+            line-height: 15px;
+            width: 40px;
+            height: 40px;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 20px;
+            line-height: 20px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .mob-menu {
+            display: none;
+            pointer-events: none;
+        }
+    }
 }

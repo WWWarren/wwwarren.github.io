@@ -1,0 +1,11 @@
+button {
+    border: 0;
+    background: $oxford-blue40;
+    color: #fff;
+    padding: 10px;
+    transition: background 0.2s;
+    
+    &:hover {
+        background: $oxford-orange
+    }
+}
