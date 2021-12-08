@@ -1,3 +1,12 @@
+header {
+    position: fixed;
+    width: 100%;
+}
+
+.nav {
+    background: #fff;
+}
+
 .logo {
     & img {
         width: 100%;
@@ -5,7 +14,7 @@
     }
 }
 
-.nav {
+.items {
     display: none;
     font-size: 14px;
     cursor: pointer;
@@ -18,9 +27,13 @@
         }
     }
 
-    div {
+    & > div {
         transition: color 0.2s;
+        position: relative;
         &:hover {
+            color: $oxford-orange;
+        }
+        .selected {
             color: $oxford-orange;
         }
     }
@@ -71,6 +84,62 @@
         .mob-menu {
             display: none;
             pointer-events: none;
+        }
+    }
+}
+
+.header-menu {
+    display: inline-flex;
+    width: auto;
+    background: #fff;
+    box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    position: absolute;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        height: 0px;
+        width: 0px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+    }
+
+    ul {
+        padding: 20px 30px;
+        margin: 0;
+        list-style: none;
+        position: relative;
+
+        &:after {
+            content: "";
+            background: #111;
+            position: absolute;
+            bottom: 25%;
+            left: 0;
+            height: 50%;
+            width: 2px;
+        }
+
+        &:first-of-type:after {
+            width: 0px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            transition: color 0.2s;
+            cursor: pointer;
+            &:hover {
+                color: $oxford-orange;
+            }
+            &:last-of-type {
+                margin-bottom: 0px;
+            }
         }
     }
 }
