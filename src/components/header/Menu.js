@@ -1,8 +1,31 @@
-import react from 'react';
-import Slide from 'react-reveal/Slide';
+import react, { useRef } from 'react';
 
-const renderContent = () => {
-    const data = ['Andor', 'Na', 'Magnets', 'Company4', 'Company 5', 'X-Ray', 'Oi', 'Nano']
+import { business, applications, products, latest, services, shop } from './MenuOptions';
+
+const renderContent = (si) => {
+    let data;
+    switch (si) {
+        case 'business':
+            data = business;
+            break;
+        case 'applications':
+            data = applications;
+            break;
+        case 'products':
+            data = products;
+            break;
+        case 'latest':
+            data = latest;
+            break;
+        case 'services':
+            data = services;
+            break;
+        case 'shop':
+            data = shop;
+            break;
+        default:
+            data = null;
+    }
 
     const result = data.reduce((resultArray, item, index) => { 
         const chunkIndex = Math.floor(index/3)
@@ -24,23 +47,23 @@ const renderContent = () => {
     return content
 }
 
-export const Menu = ({ selectedItem }) => {
-    console.log(!!selectedItem);
+const setPlacement = (menuWidth, linkWidth, linkPosition) => {
+    return linkPosition - (menuWidth / 2) + (linkWidth / 2) - 5;
+}
+
+export const Menu = ({ selectedItem, triggerMenu, linkWidth, linkPosition }) => {
+    const Menu = useRef(null);
     return (
-        <div style={{ position: 'relative' }}>
-            {
-                !!selectedItem &&
-                <Slide
-                    top
-                    duration={400}
-                >
-                    <div 
-                        className='header-menu'
-                    >
-                        {renderContent()}    
-                    </div>
-                </Slide>
-            }
+        <div style={{ position: 'relative', marginLeft: setPlacement(Menu.current ? Menu.current.clientWidth : 0, linkWidth, linkPosition) }}>
+            <div 
+                className={`
+                    ${'header-menu'}
+                    ${triggerMenu ? 'showMenu' : ''}
+                `}
+                ref={Menu}
+            >
+                {renderContent(selectedItem)}    
+            </div>
         </div>
     )
 }
