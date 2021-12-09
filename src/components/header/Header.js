@@ -1,8 +1,12 @@
-import react, { useState, useRef } from 'react';
+import react, { useState, useRef, useEffect } from 'react';
 
 import { Menu } from './Menu';
 
 import logo from '../../images/logo.png'
+
+const getWidth = () => window.innerWidth 
+  || document.documentElement.clientWidth 
+  || document.body.clientWidth;
 
 export const Header = () => {
     const [selected, setSelected] = useState(null);
@@ -12,6 +16,29 @@ export const Header = () => {
     const latestMenu = useRef(null);
     const servicesMenu = useRef(null);
     const shopMenu = useRef(null);
+
+    const [dimensions, setWidth] = useState({ 
+        height: window.innerHeight,
+        width: window.innerWidth
+    })
+    useEffect(() => {
+        const resizeListener = () => {
+            // change width from the state object
+            setWidth(getWidth())
+        };
+        // set resize listener
+        window.addEventListener('resize', resizeListener);
+
+        // clean up function
+        return () => {
+            // remove resize listener
+            window.removeEventListener('resize', resizeListener);
+        }
+    }, [])
+
+    useEffect(() => {
+        setSelected(null)
+    }, [dimensions])
 
     const selectItem = (item) => {
         let getOffset;
