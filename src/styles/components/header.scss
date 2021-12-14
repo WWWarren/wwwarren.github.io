@@ -1,6 +1,8 @@
 header {
     position: fixed;
     width: 100%;
+    border-bottom: 1px solid $oxford-grey;
+    z-index: 1000;
 }
 
 .nav {
