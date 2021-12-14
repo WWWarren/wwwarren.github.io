@@ -82,37 +82,37 @@ export const Header = () => {
                         <div className="col-4 col-lg-2 logo"><img src={logo} alt="Oxford Instruments" /></div>
                         <div className="col-6 items justify-content-between">
                             <div 
-                                onClick={() => selectItem('business')}
+                                onClick={selected !== 'business' ? () => selectItem('business') : () => {}}
                                 ref={businessMenu}
                             >
                                 <div className={`${selected && selected.id === 'business' ? 'selected' : ''}`}>Businesses <i className="fas fa-chevron-down" /></div>
                             </div>
                             <div
-                                onClick={() => selectItem('applications')}
+                                onClick={selected !== 'applications' ? () => selectItem('applications') : () => {}}
                                 ref={applicationsMenu}
                             >
                                 <div className={`${selected && selected.id === 'applications' ? 'selected' : ''}`}>Applications <i className="fas fa-chevron-down" /></div>
                             </div>
                             <div
-                                onClick={() => selectItem('products')}
+                                onClick={selected !== 'products' ? () => selectItem('products') : () => {}}
                                 ref={productssMenu}
                             >
                                 <div className={`${selected && selected.id === 'products' ? 'selected' : ''}`}>Products <i className="fas fa-chevron-down" /></div>
                             </div>
                             <div
-                                onClick={() => selectItem('latest')}
+                                onClick={selected !== 'latest' ? () => selectItem('latest') : () => {}}
                                 ref={latestMenu}
                             >
                                 <div className={`${selected && selected.id === 'latest' ? 'selected' : ''}`}>Latest <i className="fas fa-chevron-down" /></div>
                             </div>
                             <div
-                                onClick={() => selectItem('services')}
+                                onClick={selected !== 'services' ? () => selectItem('services') : () => {}}
                                 ref={servicesMenu}
                             >
                                 <div className={`${selected && selected.id === 'services' ? 'selected' : ''}`}>Services <i className="fas fa-chevron-down" /></div>
                             </div>
                             <div
-                                onClick={() => selectItem('shop')}
+                                onClick={selected !== 'shop' ? () => selectItem('shop') : () => {}}
                                 ref={shopMenu}
                             >
                                 <div className={`${selected && selected.id === 'shop' ? 'selected' : ''}`}>Shop <i className="fas fa-chevron-down" /></div>

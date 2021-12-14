@@ -1,6 +1,5 @@
 .hero {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: #ccc;
+    background: url('../../images/heroimage.jpg') no-repeat #000;
+    background-position: center top;
+    background-size: 100% auto;
 }

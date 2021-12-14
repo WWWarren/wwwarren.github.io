@@ -4,8 +4,14 @@ button {
     color: #fff;
     padding: 10px;
     transition: background 0.2s;
+    font-size: 14px;
     
     &:hover {
         background: $oxford-orange
+    }
+
+    &.big {
+        padding: 15px 30px;
+        font-size: 20px;
     }
 }
