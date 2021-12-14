@@ -133,36 +133,42 @@ export const Header = () => {
                     triggerMenu={selected && selected.id === 'business'}
                     linkWidth={(selected && selected.width) || 0}
                     linkPosition={(selected && selected.position) || 0}
+                    callback={() => setSelected(null)}
                 />
                 <Menu
                     selectedItem='applications'
                     triggerMenu={selected && selected.id === 'applications'}
                     linkWidth={(selected && selected.width) || 0}
                     linkPosition={(selected && selected.position) || 0}
+                    callback={() => setSelected(null)}
                 />
                 <Menu
                     selectedItem='products'
                     triggerMenu={selected && selected.id === 'products'}
                     linkWidth={(selected && selected.width) || 0}
                     linkPosition={(selected && selected.position) || 0}
+                    callback={() => setSelected(null)}
                 />
                 <Menu
                     selectedItem='latest'
                     triggerMenu={selected && selected.id === 'latest'}
                     linkWidth={(selected && selected.width) || 0}
                     linkPosition={(selected && selected.position) || 0}
+                    callback={() => setSelected(null)}
                 />
                 <Menu
                     selectedItem='services'
                     triggerMenu={selected && selected.id === 'services'}
                     linkWidth={(selected && selected.width) || 0}
                     linkPosition={(selected && selected.position) || 0}
+                    callback={() => setSelected(null)}
                 />
                 <Menu
                     selectedItem='shop'
                     triggerMenu={selected && selected.id === 'shop'}
                     linkWidth={(selected && selected.width) || 0}
                     linkPosition={(selected && selected.position) || 0}
+                    callback={() => setSelected(null)}
                 />
             </div>
         </header>
