@@ -1,6 +1,7 @@
 import { Header } from './header/Header';
 import { Hero } from './hero/Hero';
 import { AboutUs } from './aboutUs/AboutUs';
+import { WhatGoingOn } from './whatGoingOn/whatGoingOn';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Hero />
       <AboutUs />
+      <WhatGoingOn />
     </>
   );
 }
