@@ -2,6 +2,7 @@ import { Header } from './header/Header';
 import { Hero } from './hero/Hero';
 import { AboutUs } from './aboutUs/AboutUs';
 import { WhatGoingOn } from './whatGoingOn/whatGoingOn';
+import { Social } from './social/Social';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <AboutUs />
       <WhatGoingOn />
+      <Social />
     </>
   );
 }
