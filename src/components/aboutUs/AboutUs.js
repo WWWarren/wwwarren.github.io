@@ -35,18 +35,18 @@ export const AboutUs = () => {
             <div className="h-100 aboutUs">
                 <div className="container h-100 d-flex flex-column justify-content-between">
                     <div className="row align-items-center">
-                        <div className="col-5 offset-2">
+                        <div className="col-5 offset-1">
                             <h3>We Specialise in {title}.</h3>
                             <p> 
                                 Our core purpose is to support our customers to address some of the world's most pressing challenges, enabling a greener economy, increased connectivity, improved health and leaps in scientific understanding. 
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu lacinia turpis. Sed dapibus sed nisl ut cursus. 
                             </p>
                         </div>
-                        <div className="col-3"><Fade right><img src={aboutUsImg1} alt="" /></Fade></div>
+                        <div className="col-4 offset-1"><Fade right><img src={aboutUsImg1} alt="" /></Fade></div>
                     </div>
-                    <div className="row">
-                        <div className="col-3 offset-2"><Fade left><img src={aboutUsImg2} alt="" /></Fade></div>
-                        <div className="col-4 offset-1">
+                    <div className="row align-items-center">
+                        <div className="col-4 offset-1"><Fade left><img src={aboutUsImg2} alt="" /></Fade></div>
+                        <div className="col-5 offset-1">
                             <h3>We Specialise in You.</h3>
                             <p>
                                 We are proud to be recognised as the leaders in what we do and for the difference we make in the world. 
@@ -54,15 +54,15 @@ export const AboutUs = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-4 offset-2">
+                    <div className="row align-items-center">
+                        <div className="col-5 offset-1">
                             <h3>We Specialise in TBD.</h3>
                             <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu lacinia turpis. Sed dapibus sed nisl ut cursus. 
                             Praesent arcu mauris, bibendum nec sapien consectetur, pretium pellentesque nisi. Proin efficitur interdum nulla, non varius nunc sollicitudin sit amet. Maecenas condimentum urna justo, in hendrerit erat varius sed.
                             </p>
                         </div>
-                        <div className="col-3 offset-1"><Fade right><img src={aboutUsImg3} alt="" /></Fade></div>
+                        <div className="col-4 offset-1"><Fade right><img src={aboutUsImg3} alt="" /></Fade></div>
                     </div>
                 </div>
             </div>

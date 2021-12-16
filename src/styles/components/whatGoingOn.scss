@@ -1,6 +1,6 @@
 .whatGoingOn {
-    background: #333;
-    padding-top: 190px;
+    background: #000;
+    padding-top: 50px;
     color: #fff;
     font-size: 18px;
     line-height: 30px;
@@ -10,6 +10,62 @@
     h3 {
         font-size: 42px;
         line-height: 42px;
-        margin-bottom: 10px;
+        margin-bottom: 40px;
+    }
+}
+
+.carousel {
+    height: calc(100% - 82px);
+
+    .edges {
+        height: 90%;
+    }
+
+    .carousel-root {
+        height: 100%;
+        & div {
+            height: 100%;
+            width: 100%;
+        }
+    
+        ul, li {
+            height: 100%;
+        }
+    }
+
+    .prev-arrow, .next-arrow {
+        top: 0;
+        color: #fff;
+        font-size: 56px;
+        bottom: 0;
+        margin-top: 0;
+        padding: 5px;
+        position: absolute;
+        z-index: 10;
+        width: 10%;
+        background: none;
+        backdrop-filter: blur(8px); // This be the blur
+    }
+
+    .next-arrow {
+        right: 0;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
+        background-size: cover !important;
+        .content {
+            width: auto;
+            height: auto;
+            padding: 30px;
+            text-align: left;
+            background: rgba($color: #333, $alpha: 0.5);
+
+            h4 {
+                font-size: 32px;
+            }
+        }
     }
 }
