@@ -1,0 +1,63 @@
+.social {
+    display: flex;
+    border-bottom: 10px solid #fff;
+    .spacer-darkblue {
+        background: $oxford-blue;
+        flex: 1 0;
+    }
+    .spacer-lightblue {
+        background: $oxford-blue20;
+        flex: 1 0;
+    }
+
+    .socialMedia {
+        background: $oxford-blue;
+        color: #fff;
+        border-right: 10px solid #fff;
+        padding: 50px;
+
+        .socialRow {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 140px;
+                height: 140px;
+                background: $oxford-orange;
+                font-size: 52px;
+            }
+        }
+    }
+
+    .sharePrice {
+        background: $oxford-blue20;
+        text-align: center;
+        padding: 50px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+
+        button {
+            margin-top: 30px;
+            display: inline-block;
+        }
+
+        .price {
+            font-size: 30px;
+        }
+
+        .change {
+            font-size: 20px;
+            color: seagreen;
+        }
+
+        h3 {
+            margin-bottom: 50px;
+        }
+    }
+}
