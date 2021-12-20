@@ -32,7 +32,7 @@ export const AboutUs = () => {
     return (
         <>
             <div id="aboutUs" />
-            <div className="h-lg-100 aboutUs">
+            <div className="aboutUs">
                 <div className="container h-100 d-flex flex-column justify-content-between">
                     <div className="row align-items-center">
                         <div className="col-12 col-lg-5 offset-lg-1 order-1">

@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade';
 
 export const Hero = () => {
     return (
-        <div className="h-100 home">
+        <div className="home">
             <div className="container h-75">
                 <div className="row h-100">
                     <div className="col h-100 d-flex flex-column justify-content-center align-items-center">
@@ -13,7 +13,7 @@ export const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div className="col h-25 hero"></div>
+            <div className="col hero"></div>
         </div>
     )
 }

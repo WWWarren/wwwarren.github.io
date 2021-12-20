@@ -16,6 +16,9 @@ export const Header = () => {
     const latestMenu = useRef(null);
     const servicesMenu = useRef(null);
     const shopMenu = useRef(null);
+    const optionsMenu = useRef(null);
+    const languageMenu = useRef(null);
+    const searchMenu = useRef(null);
 
     const [dimensions, setWidth] = useState({ 
         height: window.innerHeight,
@@ -61,9 +64,18 @@ export const Header = () => {
             case 'shop':
                 getOffset = shopMenu;
                 break;
+            case 'more':
+                getOffset = optionsMenu;
+                break;
+            case 'languages':
+                getOffset = languageMenu;
+                break;
+            case 'search':
+                getOffset = searchMenu;
+                break;
             default:
                 getOffset = null;
-        } 
+        }
                
         const obj = {
             id: item,
@@ -120,9 +132,27 @@ export const Header = () => {
                         </div>
                         <div className="col-6 col-lg-2 more-buttons d-flex justify-content-between">
                             <button className="mob-menu"><i className="fas fa-bars" /></button>
-                            <button><i className="fas fa-ellipsis-v" /></button>
-                            <button><i className="fas fa-globe-europe" /></button>
-                            <button><i className="fas fa-search" /></button>
+                            <button
+                                onClick={selected !== 'more' ? () => selectItem('more') : () => {}}
+                                ref={optionsMenu}
+                                className={`${selected && selected.id === 'more' ? 'selectedBtn' : ''}`}
+                            >
+                                <i className="fas fa-ellipsis-v" />
+                            </button>
+                            <button
+                                onClick={selected !== 'languages' ? () => selectItem('languages') : () => {}}
+                                ref={languageMenu}
+                                className={`${selected && selected.id === 'languages' ? 'selectedBtn' : ''}`}
+                            >
+                                <i className="fas fa-globe-europe" />
+                            </button>
+                            <button
+                                onClick={selected !== 'search' ? () => selectItem('search') : () => {}}
+                                ref={searchMenu}
+                                className={`${selected && selected.id === 'search' ? 'selectedBtn' : ''}`}
+                            >
+                                <i className="fas fa-search" />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -166,6 +196,27 @@ export const Header = () => {
                 <Menu
                     selectedItem='shop'
                     triggerMenu={selected && selected.id === 'shop'}
+                    linkWidth={(selected && selected.width) || 0}
+                    linkPosition={(selected && selected.position) || 0}
+                    callback={() => setSelected(null)}
+                />
+                <Menu
+                    selectedItem='more'
+                    triggerMenu={selected && selected.id === 'more'}
+                    linkWidth={(selected && selected.width) || 0}
+                    linkPosition={(selected && selected.position) || 0}
+                    callback={() => setSelected(null)}
+                />
+                <Menu
+                    selectedItem='languages'
+                    triggerMenu={selected && selected.id === 'languages'}
+                    linkWidth={(selected && selected.width) || 0}
+                    linkPosition={(selected && selected.position) || 0}
+                    callback={() => setSelected(null)}
+                />
+                <Menu
+                    selectedItem='search'
+                    triggerMenu={selected && selected.id === 'search'}
                     linkWidth={(selected && selected.width) || 0}
                     linkPosition={(selected && selected.position) || 0}
                     callback={() => setSelected(null)}

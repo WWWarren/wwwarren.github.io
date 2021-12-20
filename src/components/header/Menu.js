@@ -1,6 +1,28 @@
 import react, { useRef, useEffect } from 'react';
 
-import { business, applications, products, latest, services, shop } from './MenuOptions';
+import { business, applications, products, latest, services, shop, more, languages } from './MenuOptions';
+import uk from '../../images/united-kingdom.png'
+import jp from '../../images/japan.png'
+import cn from '../../images/china.png'
+
+function getFlag(f) {
+    let flag;
+    switch (f) {
+        case 'EN':
+            flag = uk;
+            break;
+        case 'JP':
+            flag = jp;
+            break;
+        case 'CN':
+            flag = cn;
+            break;
+        default:
+            flag = null;
+    }
+
+    return flag
+}
 
 const renderContent = (si) => {
     let data;
@@ -23,28 +45,43 @@ const renderContent = (si) => {
         case 'shop':
             data = shop;
             break;
+        case 'more':
+            data = more;
+            break;
+        case 'languages':
+            data = languages;
+            break;
         default:
             data = null;
     }
 
-    const result = data.reduce((resultArray, item, index) => { 
-        const chunkIndex = Math.floor(index/3)
-        
-        if (!resultArray[chunkIndex]) {
-            resultArray[chunkIndex] = [] // start a new chunk
-        }
-        
-        resultArray[chunkIndex].push(item)
-        
-        return resultArray
-    }, []);
+    if ((si !== 'search' && si !== 'languages') && data !== null) {
+        const result = data.reduce((resultArray, item, index) => { 
+            const chunkIndex = Math.floor(index/3)
+            
+            if (!resultArray[chunkIndex]) {
+                resultArray[chunkIndex] = [] // start a new chunk
+            }
+            
+            resultArray[chunkIndex].push(item)
+            
+            return resultArray
+        }, []);
+    
+        const content = result.map((r, i) => {
+            const item = <ul key={i}>{r.map(c => <li key={c}>{c}</li>)}</ul>
+            return item
+        })
+    
+        return content
+    } else if (si === 'languages') {
+        const content = data.map((r, i) => <li key={i}><img src={getFlag(r)} alt={r} />{r}</li>)
 
-    const content = result.map((r, i) => {
-        const item = <ul key={i}>{r.map(c => <li key={c}>{c}</li>)}</ul>
-        return item
-    })
-
-    return content
+        return <ul>{content}</ul>
+    } else {
+        return <ul><li><input type="text" /></li></ul>
+    }
+    
 }
 
 const setPlacement = (menuWidth, linkWidth, linkPosition) => {
