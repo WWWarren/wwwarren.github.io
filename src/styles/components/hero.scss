@@ -1,3 +1,13 @@
+.home {
+    background: #000;
+    border-bottom: 10px solid #fff;
+    padding-top: 150px;
+
+    @media (min-width: 576px) {
+        padding-top: 190px;
+    }
+}
+
 .hero {
     background: url('../../images/heroimage.jpg') no-repeat #000;
     background-position: center top;

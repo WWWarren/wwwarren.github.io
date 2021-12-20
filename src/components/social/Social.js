@@ -6,10 +6,10 @@ import social2 from '../../images/social-img2.jpg'
 export const Social = () => {
     return (
         <div className="social">
-            <div className="spacer-darkblue" />
-            <div className="container h-100">
+            <div className="spacer-darkblue d-none d-lg-block" />
+            <div className="container-lg h-100 w-100">
                 <div className="row h-100">
-                    <div className="col-6 socialMedia">
+                    <div className="col-12 col-lg-6 socialMedia">
                         <h3>Join The Conversation.</h3>
                         <div className="socialRow">
                             <div><i class="fab fa-facebook-f"></i></div>
@@ -22,7 +22,7 @@ export const Social = () => {
                             <div><i class="fab fa-linkedin-in"></i></div>
                         </div>
                     </div>
-                    <div className="col-6 sharePrice">
+                    <div className="col-12 col-lg-6 sharePrice">
                         <h3>Investor Relations</h3>
                         <p className="price">2,355.02p</p>
                         <p className="change">+15.01p</p>
@@ -31,7 +31,7 @@ export const Social = () => {
                     </div>
                 </div>
             </div>
-            <div className="spacer-lightblue" />
+            <div className="spacer-lightblue d-none d-lg-block" />
         </div>
     )
 }

@@ -16,8 +16,8 @@ export const WhatGoingOn = () => {
                     </div>
                 </div>
                 <div className="row g-0 align-items-center carousel">
-                    <div className="col-1 edges" style={{ background: 'linear-gradient(90deg, rgba(17, 17, 17, 0.00520833) 0%, #333333 27.73%)' }} />
-                    <div className="col-10 h-100">
+                    <div className="col-1 edges d-none d-md-block" style={{ background: 'linear-gradient(90deg, rgba(17, 17, 17, 0.00520833) 0%, #333333 27.73%)' }} />
+                    <div className="col-12 col-md-10 h-100">
                         <Carousel
                             showThumbs={false}
                             showStatus={false}
@@ -72,7 +72,7 @@ export const WhatGoingOn = () => {
                             </div>
                         </Carousel>
                     </div>
-                    <div className="col-1 h-75" style={{ background: 'linear-gradient(90deg, rgba(17, 17, 17, 0.00520833) 0%, #333333 27.73%)', transform: 'rotate(-180deg)' }} />
+                    <div className="col-1 edges d-none d-md-block" style={{ background: 'linear-gradient(90deg, rgba(17, 17, 17, 0.00520833) 0%, #333333 27.73%)', transform: 'rotate(-180deg)' }} />
                 </div>
             </div>
         </div>
