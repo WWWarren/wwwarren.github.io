@@ -1,6 +1,6 @@
 import react, { useRef, useEffect } from 'react';
 
-import { business, applications, products, latest, services, shop, more, languages } from './MenuOptions';
+import { business, applications, products, latest, services, shop, more, languages, mobile } from './MenuOptions';
 import uk from '../../images/united-kingdom.png'
 import jp from '../../images/japan.png'
 import cn from '../../images/china.png'
@@ -51,6 +51,9 @@ const renderContent = (si) => {
         case 'languages':
             data = languages;
             break;
+        case 'mob':
+            data = mobile;
+            break;
         default:
             data = null;
     }
@@ -79,12 +82,15 @@ const renderContent = (si) => {
 
         return <ul>{content}</ul>
     } else {
-        return <ul><li><input type="text" /></li></ul>
+        return <ul><li><input type="text" className="search" /></li></ul>
     }
     
 }
 
 const setPlacement = (menuWidth, linkWidth, linkPosition) => {
+    if (menuWidth === 0) {
+        return 0
+    }
     return linkPosition - (menuWidth / 2) + (linkWidth / 2) - 5;
 }
 
@@ -108,8 +114,17 @@ export const Menu = ({ selectedItem, triggerMenu, linkWidth, linkPosition, callb
         };
     }, [triggerMenu, callback])
 
+    let size;
+    const desktopWidth = window.innerWidth;
+
+    if (desktopWidth < 992) {
+        size = 0
+    } else if (Menu.current) {
+        size = Menu.current.clientWidth
+    }
+
     return (
-        <div style={{ position: 'relative', marginLeft: setPlacement(Menu.current ? Menu.current.clientWidth : 0, linkWidth, linkPosition) }}>
+        <div className="menuContainer" style={{ position: 'relative', marginLeft: setPlacement(size ? size : 0, linkWidth, linkPosition) }}>
             <div 
                 className={`
                     ${'header-menu'}

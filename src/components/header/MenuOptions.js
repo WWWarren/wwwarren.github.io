@@ -13,3 +13,5 @@ export const shop = ['UK', 'Europe', 'Asia', 'Japan', 'China']
 export const more = ['Sustainability', 'Investors', 'Careers', 'Learning', 'Contact']
 
 export const languages = ['EN', 'JP', 'CN']
+
+export const mobile = ['Business', 'Applications', 'Products', 'Latest', 'Services', 'Shop']

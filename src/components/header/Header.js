@@ -19,6 +19,7 @@ export const Header = () => {
     const optionsMenu = useRef(null);
     const languageMenu = useRef(null);
     const searchMenu = useRef(null);
+    const mobMenu = useRef(null);
 
     const [dimensions, setWidth] = useState({ 
         height: window.innerHeight,
@@ -72,6 +73,9 @@ export const Header = () => {
                 break;
             case 'search':
                 getOffset = searchMenu;
+                break;
+            case 'mob':
+                getOffset = mobMenu;
                 break;
             default:
                 getOffset = null;
@@ -131,7 +135,13 @@ export const Header = () => {
                             </div>
                         </div>
                         <div className="col-6 col-lg-2 more-buttons d-flex justify-content-between">
-                            <button className="mob-menu"><i className="fas fa-bars" /></button>
+                            <button 
+                                onClick={selected !== 'mob' ? () => selectItem('mob') : () => {}}
+                                ref={mobMenu}
+                                className="mob-menu"
+                            >
+                                <i className="fas fa-bars" />
+                            </button>
                             <button
                                 onClick={selected !== 'more' ? () => selectItem('more') : () => {}}
                                 ref={optionsMenu}
@@ -217,6 +227,13 @@ export const Header = () => {
                 <Menu
                     selectedItem='search'
                     triggerMenu={selected && selected.id === 'search'}
+                    linkWidth={(selected && selected.width) || 0}
+                    linkPosition={(selected && selected.position) || 0}
+                    callback={() => setSelected(null)}
+                />
+                <Menu
+                    selectedItem='mob'
+                    triggerMenu={selected && selected.id === 'mob'}
                     linkWidth={(selected && selected.width) || 0}
                     linkPosition={(selected && selected.position) || 0}
                     callback={() => setSelected(null)}
