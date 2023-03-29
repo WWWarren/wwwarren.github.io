@@ -5,40 +5,37 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <div id="container">
-            <div id="1" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.165) 0%, rgba(0, 0, 0, 0.55) 100%), url('https://picsum.photos/2000/500'); color: white;" class="active">
+    <div id="header">
+        <div id="slides">
+            <div style="background-color: #F3C969;" class="active">
                 <h1>We are Oxford Instruments</h1>
                 <h3>Leading provider of high tech products</h3>
             </div>
-            <div id="2" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.165) 0%, rgba(0, 0, 0, 0.55) 100%), url('https://picsum.photos/2000/500'); color: white;">
+            <div style="background-color: #EDFF86;">
                 <h1>Plasma Polish Dry Etch (PPDE)</h1>
                 <h3>Cost-Effective and Green alternative to CMP for SiC production fabs</h3>
                 <a href="">Learn More</a>
             </div>
-            <div id="3" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.165) 0%, rgba(0, 0, 0, 0.55) 100%), url('https://picsum.photos/2000/500'); color: white;">
+            <div style="background-color: #FFF5B2;">
                 <h1>APS 2023</h1>
                 <h3>March 5–10, 2023 | Las Vegas, Nevada</h3>
                 <a href="">Book Today</a>
             </div>
-            <div id="4" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.165) 0%, rgba(0, 0, 0, 0.55) 100%), url('https://picsum.photos/2000/500'); color: white;">
+            <div style="background-color: #D4FCC3;">
                 <h1>Raman Microscope at the Forefront of Battery Research</h1>
                 <h3>WITec installs alpha300 R at ZSW in Ulm, Germany</h3>
                 <a href="">Read More</a>
             </div>
-            <div id="5" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.165) 0%, rgba(0, 0, 0, 0.55) 100%), url('https://picsum.photos/2000/500'); color: white;">
+            <div style="background-color: #362C28; color: white;">
                 <h1>New X-Pulse NMR</h1>
                 <h3>With sample automation and major new capabilities</h3>
                 <a href="">Learn More</a>
             </div>
         </div>
-        <div id="buttons">
-            <div onclick="changeSlide(this)" class="active">1</div>
-            <div onclick="changeSlide(this)">2</div>
-            <div onclick="changeSlide(this)">3</div>
-            <div onclick="changeSlide(this)">4</div>
-            <div onclick="changeSlide(this)">5</div>
-        </div>
+        <div id="buttons"></div>
     </div>
 </body>
 <script src="index.js"></script>
+<script>
+    document.getElementById("header").addEventListener("load", homepageBanner());
+</script>
