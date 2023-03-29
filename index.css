@@ -1,11 +1,11 @@
-body, html {
+body, html, * {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#header {
+#oi-slider {
     position: relative;
 }
 
@@ -66,10 +66,10 @@ body, html {
 
 #buttons {
     display: flex;
+    justify-content: center;
     position: absolute;
     bottom: 10px;
-    left: 50%;
-    transform: translate(-25%, 0%);
+    width: 100%;
 }
 #buttons > button {
     display: inline-block;
@@ -86,5 +86,16 @@ body, html {
 }
 #buttons > button.active {
     background: #e98300;
+}
+
+.arrow-next, .arrow-prev {
+    position: absolute;
+    bottom: 50%;
+    transform: translate(0%, -25%);
+    width: 30px;
+    height: 30px;
+}
+.arrow-next {
+    right: 0%;
 }
 
