@@ -31,7 +31,7 @@ function homepageBanner() {
         const nextArrow = elNew("button", {
             type: "button",
             className: "arrow-next",
-            innerHTML: "<span></span>",
+            innerHTML: "<span><i class='arrow right'></i></span>",
             onclick: () => next(),
         });
 
@@ -39,7 +39,7 @@ function homepageBanner() {
         const prevArrow = elNew("button", {
             type: "button",
             className: "arrow-prev",
-            innerHTML: "<span></span>",
+            innerHTML: "<span><i class='arrow left'></i></span>",
             onclick: () => prev(),
         });
 
