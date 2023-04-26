@@ -68,26 +68,85 @@
     </div>
     <div>
         <div class="container">
-            <div class="row section tabs">
-                <div class="col">
-                    <div class="item" style="background: url('https://picsum.photos/1100/300')">
-                        <h2>Products</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Leo a diam sollicitudin tempor id eu. Urna nunc id cursus metus aliquam eleifend mi in nulla. Id leo in vitae turpis massa sed. </p>
+            <div class="row section">
+                <div class="tabs">
+                    <div class="titles">
+                        <div>Products</div>
+                        <div>Applications</div>
+                        <div>Services</div>
+                    </div>
+                    <div class="panel">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Leo a diam sollicitudin tempor id eu. Urna nunc id cursus metus aliquam eleifend mi in nulla. Id leo in vitae turpis massa sed. </p>
+                        </div>
+                        <div class="image" style="background-color: aquamarine;">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Leo a diam sollicitudin tempor id eu. Urna nunc id cursus metus aliquam eleifend mi in nulla. Id leo in vitae turpis massa sed. </p>
+                        </div>
+                        <div class="image" style="background-color: rebeccapurple">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Leo a diam sollicitudin tempor id eu. Urna nunc id cursus metus aliquam eleifend mi in nulla. Id leo in vitae turpis massa sed. </p>
+                        </div>
+                        <div class="image" style="background-color: yellow">
+                            <img src="" alt="">
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="item" style="background: url('https://picsum.photos/1100/300')">
-                        <h2>Applications</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Leo a diam sollicitudin tempor id eu. Urna nunc id cursus metus aliquam eleifend mi in nulla. Id leo in vitae turpis massa sed. </p>
+            </div>
+            <div class="row section">
+                <div class="tabs">
+                    <div class="titles">
+                        <div>Products</div>
+                        <div>Applications</div>
+                        <div>Services</div>
+                        <div>Test</div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="item" style="background: url('https://picsum.photos/1100/300')">
-                        <h2>Services</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Leo a diam sollicitudin tempor id eu. Urna nunc id cursus metus aliquam eleifend mi in nulla. Id leo in vitae turpis massa sed. </p>
+                    <div class="panel">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Leo a diam sollicitudin tempor id eu. Urna nunc id cursus metus aliquam eleifend mi in nulla. Id leo in vitae turpis massa sed. </p>
+                        </div>
+                        <div class="image" style="background-color: aquamarine;">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Leo a diam sollicitudin tempor id eu. Urna nunc id cursus metus aliquam eleifend mi in nulla. Id leo in vitae turpis massa sed. </p>
+                        </div>
+                        <div class="image" style="background-color: rebeccapurple">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Leo a diam sollicitudin tempor id eu. Urna nunc id cursus metus aliquam eleifend mi in nulla. Id leo in vitae turpis massa sed. </p>
+                        </div>
+                        <div class="image" style="background-color: yellow">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Leo a diam sollicitudin tempor id eu. Urna nunc id cursus metus aliquam eleifend mi in nulla. Id leo in vitae turpis massa sed. </p>
+                        </div>
+                        <div class="image" style="background-color: red">
+                            <img src="" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,4 +156,9 @@
 <script src="index.js"></script>
 <script>
     document.getElementById("oi-slider").addEventListener("load", homepageBanner());
+
+    const tabs = document.querySelectorAll(".tabs");
+    tabs.forEach((t) => {
+        oiTabs(t);
+    });
 </script>
