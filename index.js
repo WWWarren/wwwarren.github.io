@@ -108,9 +108,7 @@ function homepageBanner() {
 
 function oiTabs(tabs) {
     const panels = tabs.querySelectorAll('.panel');
-    console.log(panels);
     const titles = tabs.querySelector('.titles').children;
-    console.log(titles);
 
     let x = 0;
     const changeNum = (index) => {
@@ -127,7 +125,7 @@ function oiTabs(tabs) {
 
         // Add active class onto active panel/title
         panels[panel].classList.add("active");
-        titles[panel].classList.remove("active");
+        titles[panel].classList.add("active");
     }
 
     for (let i = 0; i < titles.length; i++) {
